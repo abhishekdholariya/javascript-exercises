@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook</title>
+
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+
+    <!-- Font-awesome link -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+  </head>
+  <body>
+    <div class="container-fluid m-0 p-0">
+      <div class="row">
+        <div class="col-lg-12 sticky-top">
+          <!-- navbar strat -->
+          <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img
+                  src="images/facebook.svg"
+                  alt=""
+                  width="30"
+                  height="24"
+                  class="d-inline-block align-text-top"
+                />Facebook
+              </a>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Post</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#"
+                      >Message<span
+                        class="position-absolute top-5 start-40 translate-middle badge rounded-pill bg-danger"
+                        >10</span
+                      ></a
+                    >
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button class="btn btn-outline-light" type="submit">
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <!-- navbar end -->
+
+        <!--  main content start -->
+        <div class="col-lg-7 mt-1">
+            <div
+              class="d-flex flex-column align-items-stretch flex-shrink-0 text-white p-3"
+              style="width: 100%"
+            >
+              <div class="list-group list-group-flush scrollarea p-3">
+                <!-- Card images-->
+  
+                <div
+                  class="card gedf-card bg-dark"
+                  style="
+                    background-color: black;
+                    color: white;
+                    border: 1px solid white;
+                    border-radius: 10px;
+                  "
+                >
+                  <div class="card-header">
+                    <ul
+                      class="nav nav-tabs card-header-tabs bg-dark"
+                      id="myTab"
+                      role="tablist"
+                      style="color: white"
+                    >
+                      <li class="nav-item">
+                        <a
+                          class="nav-link active bg-dark"
+                          id="posts-tab"
+                          style="color: white; border-bottom: 0px"
+                          data-toggle="tab"
+                          href="#posts"
+                          role="tab"
+                          aria-controls="posts"
+                          aria-selected="true"
+                          >Write a note</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link bg-dark text-white"
+                          id="images-tab"
+                          style="border-bottom: 0px"
+                          data-toggle="tab"
+                          role="tab"
+                          aria-controls="images"
+                          aria-selected="false"
+                          href="#images"
+                          >Images</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-body bg-dark">
+                    <div class="tab-content" id="myTabContent">
+                      <div
+                        class="tab-pane fade show active"
+                        id="posts"
+                        role="tabpanel"
+                        aria-labelledby="posts-tab"
+                      >
+                        <div class="form-group">
+                          <!-- <label class="sr-only" for="message">post</label> -->
+                          <textarea
+                            class="form-control border border-white"
+                            style="background-color: light; color: white"
+                            id="message"
+                            rows="3"
+                            placeholder="What are you thinking?"
+                          ></textarea>
+                        </div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="images"
+                        role="tabpanel"
+                        aria-labelledby="images-tab"
+                      >
+                        <div class="form-group">
+                          <div class="custom-file">
+                            <input
+                              type="file"
+                              class="custom-file-input"
+                              id="customFile"
+                            />
+                            <label class="custom-file-label" for="customFile"
+                              >Upload image</label
+                            >
+                          </div>
+                        </div>
+                        <div class="py-4"></div>
+                      </div>
+                    </div>
+                    <div class="btn-toolbar justify-content-between pt-3">
+                      <div class="btn-group">
+                        <button
+                          type="submit"
+                          class="btn btn-primary btn-dark text-white border border-white"
+                        >
+                          Upload
+                        </button>
+                      </div>
+                      <div class="btn-group">
+                        <button
+                          id="btnGroupDrop1"
+                          type="button"
+                          class="btn btn-link dropdown-toggle"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <i
+                            class="fa fa-globe"
+                            data-animation="slide-right"
+                            data-animation-reset="true"
+                            data-toggle="animation"
+                          ></i>
+                        </button>
+                        <div
+                          class="dropdown-menu dropdown-menu-right"
+                          aria-labelledby="btnGroupDrop1"
+                        >
+                          <a class="dropdown-item" href="#"
+                            ><i class="fa fa-globe"></i> Public</a
+                          >
+                          <a class="dropdown-item" href="#"
+                            ><i class="fa fa-users"></i> Friends</a
+                          >
+                          <a class="dropdown-item" href="#"
+                            ><i class="fa fa-user"></i> Just me</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- 2 post -->
+                <div class="card gedf-card mt-5">
+                  <div class="card-header">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div class="mr-2">
+                          <img
+                            class="rounded-circle"
+                            width="45"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZd-G5KVUhsv48oXP73_bG3AZeb9p6VPw30w&usqp=CAU"
+                            alt=""
+                          />
+                        </div>
+                        <div class="ml-2">
+                          <div class="h5" style="color: black; font-size: 15px">
+                            none
+                          </div>
+                          <div class="h7 text-muted" style="margin-left: 3px">
+                            One Piece
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="dropdown">
+                          <button
+                            class="btn btn-link dropdown-toggle"
+                            type="button"
+                            id="gedf-drop1"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            <i class="fa fa-ellipsis-h"></i>
+                          </button>
+                          <div
+                            class="dropdown-menu dropdown-menu-right"
+                            aria-labelledby="gedf-drop1"
+                          >
+                            <div class="h6 dropdown-header">Configuration</div>
+                            <a class="dropdown-item" href="#">Save</a>
+                            <a class="dropdown-item" href="#">Hide</a>
+                            <a class="dropdown-item" href="#">Report</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="text-muted h7 mb-2">
+                      <i class="fa fa-clock-o"></i>10 min ago
+                    </div>
+                    <!-- <a class="card-link" href="#">
+                          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adip.</h5>
+                      </a> -->
+  
+                    <!-- <p class="card-text">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo recusandae nulla rem eos ipsa praesentium esse magnam nemo dolor
+                          sequi fuga quia quaerat cum, obcaecati hic, molestias minima iste voluptates.
+                      </p> -->
+                    <div class="mr-2" style="overflow: hidden">
+                      <img
+                        width="550"
+                        height="500"
+                        src="img/One-1.jpg"
+                        id="image-feed"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="#" class="card-link"
+                      ><i class="fa fa-heart-o"></i> Like</a
+                    >
+                    <a href="#" class="card-link"
+                      ><i class="fa fa-comment-o"></i> Comment</a
+                    >
+                    <a href="#" class="card-link"
+                      ><i class="fa fa-mail-forward"></i> Share</a
+                    >
+                  </div>
+                </div>
+  
+                <!-- 3 card -->
+  
+                <div class="card gedf-card mt-5">
+                  <div class="card-header">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div class="mr-2">
+                          <img
+                            class="rounded-circle"
+                            width="45"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZd-G5KVUhsv48oXP73_bG3AZeb9p6VPw30w&usqp=CAU"
+                            alt=""
+                          />
+                        </div>
+                        <div class="ml-2">
+                          <div class="h5" style="color: black; margin-left: 5px">
+                            none
+                          </div>
+                          <div class="h7 text-muted" style="margin-left: 5px">
+                            Anime
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="dropdown">
+                          <button
+                            class="btn btn-link dropdown-toggle"
+                            type="button"
+                            id="gedf-drop1"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            <i class="fa fa-ellipsis-h"></i>
+                          </button>
+                          <div
+                            class="dropdown-menu dropdown-menu-right"
+                            aria-labelledby="gedf-drop1"
+                          >
+                            <div class="h6 dropdown-header">Configuration</div>
+                            <a class="dropdown-item" href="#">Save</a>
+                            <a class="dropdown-item" href="#">Hide</a>
+                            <a class="dropdown-item" href="#">Report</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="text-muted h7 mb-2">
+                      <i class="fa fa-clock-o"></i>10 min ago
+                    </div>
+                    <a class="card-link" href="#">
+                      <h5 class="card-title">
+                        Lorem ipsum dolor sit amet, consectetur adip.
+                      </h5>
+                    </a>
+                    <div class="mr-2" style="overflow: hidden">
+                      <img
+                        width="500"
+                        height="600"
+                        src="images/facebook1.jpeg"
+                        id="image-feed"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="#" class="card-link"
+                      ><i class="bi bi-heart"></i>Like</a
+                    >
+                    <a href="#" class="card-link"
+                      ><i class="fa fa-comment-o"></i> Comment</a
+                    >
+                    <a href="#" class="card-link"
+                      ><i class="fa fa-mail-forward"></i> Share</a
+                    >
+                  </div>
+                </div>
+  
+                <!-- /card -->
+              </div>
+            </div>
+          </div>
+
+        <!--  -->
+
+        <!-- meas -->
+       
+        <div class="col-lg-5" style="overflow-x: scroll; height:510px" >
+          <div
+            class="d-flex flex-column bg-dark align-items-stretch flex-shrink-0"
+          >
+            <a
+              href="#"
+              class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom sticky-top"
+            >
+              <svg
+                class="me-2"
+                xmlns="http://www.w3.org/2000/svg"
+                height="22"
+                width="22"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  fill="#FFFFFF"
+                  d="M256 448c141.4 0 256-93.1 256-208S397.4 32 256 32S0 125.1 0 240c0 45.1 17.7 86.8 47.7 120.9c-1.9 24.5-11.4 46.3-21.4 62.9c-5.5 9.2-11.1 16.6-15.2 21.6c-2.1 2.5-3.7 4.4-4.9 5.7c-.6 .6-1 1.1-1.3 1.4l-.3 .3 0 0 0 0 0 0 0 0c-4.6 4.6-5.9 11.4-3.4 17.4c2.5 6 8.3 9.9 14.8 9.9c28.7 0 57.6-8.9 81.6-19.3c22.9-10 42.4-21.9 54.3-30.6c31.8 11.5 67 17.9 104.1 17.9zM128 208a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm128 0a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm96 32a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"
+                />
+              </svg>
+              <span class="fs-5 fw-semibold text-white">Messages</span>
+            </a>
+            <div class="list-group list-group-flush border-bottom" >
+              <a
+                href="#"
+                class="list-group-item list-group-item-action active py-3 lh-tight"
+                aria-current="true"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">Anime Joy</strong>
+                  <small>Mon</small>
+                </div>
+                <div class="col-10 mb-1 small">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Impedit earum rem magni asperiores incidunt vitae, illo
+                  aliquid sed animi iusto.
+                </div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">Neil</strong>
+                  <small class="text-muted">Today</small>
+                </div>
+                <div class="col-10 mb-1 small">Can You Watch One Peice??</div>
+              </a>
+
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Mon</small>
+                </div>
+                <div class="col-10 mb-1 small">
+                  Some placeholder content in a paragraph below the heading and
+                  date.
+                </div>
+              </a>
+
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Mon</small>
+                </div>
+                <div class="col-10 mb-1 small">
+                  Some placeholder content in a paragraph below the heading and
+                  date.
+                </div>
+              </a>
+
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Mon</small>
+                </div>
+                <div class="col-10 mb-1 small">
+                  Some placeholder content in a paragraph below the heading and
+                  date.
+                </div>
+              </a>
+
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+                aria-current="true"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Wed</small>
+                </div>
+                <div class="col-10 mb-1 small">
+                  Some placeholder content in a paragraph below the heading and
+                  date.
+                </div>
+              </a>
+
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Tues</small>
+                </div>
+                <div class="col-10 mb-1 small">
+                  Some placeholder content in a paragraph below the heading and
+                  date.
+                </div>
+              </a>
+
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Mon</small>
+                </div>
+                <div class="col-10 mb-1 small">
+                  Some placeholder content in a paragraph below the heading and
+                  date.
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

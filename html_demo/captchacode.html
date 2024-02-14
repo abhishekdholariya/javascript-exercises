@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Captcha Example</title>
+</head>
+<body>
+
+<div id="captcha-container"></div>
+<input type="text" id="captcha-input" placeholder="Enter the code">
+<button onclick="createCaptcha()">Refresh</button>
+<button onclick="verifyCaptcha()">Verify</button>
+
+<script>
+// Function to generate a random alphanumeric string
+function generateRandomString(length) {
+  const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let result = '';
+  for (let i = 0; i < length; i++) {
+    result += charset.charAt(Math.floor(Math.random() * charset.length));
+  }
+  return result;
+}
+
+// Function to create a new captcha
+function createCaptcha() {
+  const captchaText = generateRandomString(6); // You can adjust the length as needed
+  document.getElementById('captcha-container').innerText = captchaText;
+}
+
+// Function to verify captcha
+function verifyCaptcha() {
+  const userInput = document.getElementById('captcha-input').value;
+  const captchaText = document.getElementById('captcha-container').innerText;
+
+  if (userInput === captchaText) {
+    alert('Captcha is correct!');
+    // You can add further actions for a correct captcha here
+  } else {
+    alert('Captcha is incorrect. Please try again.');
+    // You can add further actions for an incorrect captcha here
+  }
+}
+</script>
+
+</body>
+</html>

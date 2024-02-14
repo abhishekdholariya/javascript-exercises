@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>modal</title>
+</head>
+<body>
+
+  <!-- Modal -->
+  <div class="container">
+    <div class="row py-3 justify-content-center">
+        <div class="col-md-3">
+            <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#mymodal">
+                open modal
+            </button>
+            <div class="modal fade" id="mymodal" data-backdrop="static">
+                <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                    <div class="modal-content">
+                        
+                        <div class="modal-header">
+                            <h4 class="modal-title">modal header</h4>
+                            <button type="button" class="close" data-bs-dismiss="modal"><span>&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            ipsum dolor sit amet consectetur adipisicing elit. Pariatur sequi iusto labore, beatae ullam modi nisi ipsum, nihil obcaecati unde, ut atque quisquam incidunt molestias id facere voluptates suscipit eum! Molestias repellat consequuntur cupiditate qui eligendi, quos cum impedit ratione quas dolore eos officia nostrum numquam cumque omnis voluptatibus, natus assumenda voluptas ullam velit? Ex accusantium nemo esse enim, voluptas necessitatibus sed rem magnam quos debitis, aspernatur, optio facilis soluta tenetur. Adipisci, corporis. Architecto eos, dolorem est dicta animi delectus qui inventore, optio natus consequuntur excepturi? Distinctio possimus unde perspiciatis laboriosam ea dignissimos ipsa obcaecati voluptates, mollitia, illo voluptatum voluptas sit tempora saepe qui. Ad, molestias. Est dolorem quaerat hic, doloribus reprehenderit maiores nam aliquam voluptatibus voluptatum magnam ipsam a quo quae soluta alias totam cum accusantium natus perspiciatis culpa distinctio dolorum nostrum dignissimos? Facere, aliquid. Repellendus veritatis mollitia in dolorum dolore deleniti quasi minima, cumque, nesciunt esse amet sed iure enim! Laboriosam, ad, id impedit dignissimos rem possimus culpa placeat aperiam obcaecati earum porro veniam incidunt reprehenderit libero? Labore amet magni pariatur temporibus, sint incidunt officia magnam reiciendis velit eaque saepe doloremque quasi error sunt omnis ab, quidem molestias quaerat ea est! Similique, voluptate exercitationem. Voluptates debitis inventore perferendis numquam illum nulla repudiandae, iste explicabo hic architecto. Repudiandae optio cupiditate voluptatibus ad et, mollitia commodi velit tempora delectus fugiat similique eius esse adipisci veritatis ea amet vitae ut sed, aperiam eveniet aliquam quas aliquid cum deserunt! Hic eveniet neque molestias tenetur! Aliquam magni maxime id at nemo dolorem perspiciatis nam aut provident consectetur 
+                            cum harum adipisci ipsum unde soluta dicta, sapiente delectus, libero accusantium perferendis asperiores. Totam quod eum impedit velit mollitia qui dicta vel, sed tenetur provident modi fugiat quam recusandae. Et repellendus dolorum labore iste nam, iure perferendis molestias doloribus cupiditate aperiam adipisci ut id, a enim.
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" value="Close" class="btn btn-danger" data-bs-dismiss="modal" />
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+  
+  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body">
+          Show a second modal and hide this one with the button below.
+        </div>
+        
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+        </div>
+     
+    </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+  
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+   
+        <div class="modal-body">
+          Hide this modal and show the first with the button below.
+        </div>
+   
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
+        </div>
+   
+    </div>
+    </div>
+  </div>
+  <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

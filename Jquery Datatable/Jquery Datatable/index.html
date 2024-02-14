@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List -JQuery</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <section id="headSec">
+        <h1>CRUD using JQuery Datatable and LocalStorage </h1>
+    </section>
+    <section id="bodySec">
+        <section id="inputSec">
+            <div class="inputDiv">
+                <input type="text" name="name" placeholder="Enter Name">
+            </div>
+            <div class="inputDiv">
+                <input type="text" name="city" placeholder="Enter City">
+            </div>
+            <div class="inputDiv">
+                <input type="text" name="number" placeholder="Enter Family Members">
+            </div>
+            <div class="submitDiv">
+                <button id="addTask">Add New</button>
+            </div>
+        </section>
+        <section id="displaySec">
+            <div id="groupBy">
+                <h4>Group By:</h4>
+                <button id="gpByName">Name</button>
+                <button id="gpByCity">City</button>
+                <button id="gpByMobile">Family</button>
+            </div>
+            <div id="displayDiv">
+                <table id="table" class="display">
+                    <thead id="tableHead">
+                        <tr class="row">
+                            <td class="data">Id</td>
+                            <td class="data">Name</td>
+                            <td class="data">City</td>
+                            <td class="data">Family Members</td>
+                            <td class="data">Action</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </section>
+<script src="lib/jquery.js"></script>
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

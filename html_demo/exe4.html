@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/exe4.css" />
+    <title>form</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" placeholder="Format:123-456-7890">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male" checked>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="female">
+        <label for="female">Female</label>
+
+        <label>Interests:</label>
+        <input type="checkbox" name="interest" value="coding">
+        <label for="coding">Coding</label>
+        <input type="checkbox" name="interest" value="design">
+        <label for="design">Design</label>
+        <input type="checkbox" name="interest" value="reading">
+        <label for="reading">Reading</label>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="us">United States</option>
+            <option value="ca">india</option>
+            <option value="uk">United Kingdom</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

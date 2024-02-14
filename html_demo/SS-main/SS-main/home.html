@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>SocialMate</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="home.html">
+    <link rel="stylesheet" href="home.js">
+
+
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sidebars/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+    <!-- Custom styles for this template -->
+    <link href="sidebars.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main>
+
+        <!-- menu -->
+
+        <!-- <div class="container"> -->
+
+        <div class="d-flex flex-column  flex-shrink-0 p-3 text-white" id="sidebar" style="width: 20%;">
+            <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none ">
+                <img src="data:image/png;base64,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"
+                    alt="" width="54" height="54" class="rounded-circle me-3 ">
+
+                <span class="fs-4 word">Anime</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto" id="ic">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active" aria-current="page">
+                        <svg class="me-2 ic" xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                            viewBox="0 0 576 512">
+                            <path fill="#FFFFFF"
+                                d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                        </svg>
+                        <span class="word"> home </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="nav-link text-white ">
+                        <svg class="ic" xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#FFFFFF"
+                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                        </svg>
+                        <span class="word"> Search</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white ">
+                        <svg class="ic" xmlns="http://www.w3.org/2000/svg" height="16" width="20"
+                            viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#FFFFFF"
+                                d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z" />
+                        </svg>
+                        <span class="word">Communities</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white ">
+                        <svg class="ic" xmlns="http://www.w3.org/2000/svg" height="16" width="20"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#FFFFFF"
+                                d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z" />
+                        </svg>
+                        <span class="word"> Notification </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="nav-link text-white ">
+                        <svg class="ic" xmlns="http://www.w3.org/2000/svg" height="16" width="20"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#ffffff"
+                                d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                        </svg>
+                        <span class="word"> DM</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <hr>
+
+            <div class="nav-link">
+               
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                # Treanding
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul class="">
+                                    <li>#One Pieace</li>
+                                    <li>#Watch Naruto</li>
+                                    <li>#supports One Pieace</li>
+                                    <li>#Anime One</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="nav-link text-white">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle word"
+                    id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZd-G5KVUhsv48oXP73_bG3AZeb9p6VPw30w&usqp=CAU"
+                        alt="" width="54" height="54" class="rounded-circle me-3">
+                    <strong class="word">neil</strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow word" id="dropdown"
+                    aria-labelledby="dropdownUser1">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#popup1">Sign Out </a></li>
+
+
+                </ul>
+
+            </div>
+            <!-- </div> -->
+        </div>
+
+       
+        <div class="d-flex flex-column align-items-stretch flex-shrink-0 text-white p-3" style="width: 50%;">
+            <a href="#" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none ">
+                <svg class="me-2" xmlns="http://www.w3.org/2000/svg" height="22" width="22" viewBox="0 0 576 512">
+                    <path fill="#FFFFFF"
+                        d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                </svg>
+                <span class="fs-5 fw-semibold text-white">Feed</span>
+            </a>
+            <div class="list-group list-group-flush scrollarea p-3">
+
+                <!-- Card images-->
+
+                <div class="card gedf-card bg-dark"
+                    style="background-color: black; color: white; border: 1px solid white; border-radius: 10px;">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs bg-dark" id="myTab" role="tablist"
+                            style="color: white;">
+                            <li class="nav-item">
+                                <a class="nav-link active bg-dark" id="posts-tab"
+                                    style="color: white; border-bottom: 0px;" data-toggle="tab" href="#posts" role="tab"
+                                    aria-controls="posts" aria-selected="true">Write a note</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link bg-dark text-white" id="images-tab" style="border-bottom: 0px;"
+                                    data-toggle="tab" role="tab" aria-controls="images" aria-selected="false"
+                                    href="#images">Images</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body bg-dark">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="posts" role="tabpanel"
+                                aria-labelledby="posts-tab">
+                                <div class="form-group">
+                                    <!-- <label class="sr-only" for="message">post</label> -->
+                                    <textarea class="form-control border border-white"
+                                        style="background-color: black; color: white;" id="message" rows="3"
+                                        placeholder="What are you thinking?"></textarea>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="images-tab">
+                                <div class="form-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile">Upload image</label>
+                                    </div>
+                                </div>
+                                <div class="py-4"></div>
+                            </div>
+                        </div>
+                        <div class="btn-toolbar justify-content-between pt-3">
+                            <div class="btn-group">
+                                <button type="submit"
+                                    class="btn btn-primary btn-dark text-white border border-white">Upload</button>
+                            </div>
+                            <div class="btn-group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-link dropdown-toggle"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-globe" data-animation="slide-right" data-animation-reset="true"
+                                        data-toggle="animation"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
+                                    <a class="dropdown-item" href="#"><i class="fa fa-globe"></i> Public</a>
+                                    <a class="dropdown-item" href="#"><i class="fa fa-users"></i> Friends</a>
+                                    <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Just me</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 post -->
+                    <div class="card gedf-card mt-5">
+                        <div class="card-header">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="mr-2">
+                                        <img class="rounded-circle" width="45"
+                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZd-G5KVUhsv48oXP73_bG3AZeb9p6VPw30w&usqp=CAU"
+                                            alt="">
+                                    </div>
+                                    <div class="ml-2">
+                                        <div class="h5" style="color: black; font-size: 15px;">none</div>
+                                        <div class="h7 text-muted" style="margin-left: 3px;">One Piece</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="dropdown">
+                                        <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-h"></i>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
+                                            <div class="h6 dropdown-header">Configuration</div>
+                                            <a class="dropdown-item" href="#">Save</a>
+                                            <a class="dropdown-item" href="#">Hide</a>
+                                            <a class="dropdown-item" href="#">Report</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>10 min ago</div>
+                            <!-- <a class="card-link" href="#">
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adip.</h5>
+            </a> -->
+
+                            <div class="mr-2" style="overflow: hidden;">
+                                <img width="550" height="500" src="img/One-1.jpg" id="image-feed" alt="">
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="card-link"><i class="fa fa-heart-o"></i> Like</a>
+                            <a href="#" class="card-link"><i class="fa fa-comment-o"></i> Comment</a>
+                            <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
+                        </div>
+                    </div>
+
+                <!-- 3 card -->
+
+                <div class="card gedf-card mt-5">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="mr-2">
+                                    <img class="rounded-circle" width="45"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZd-G5KVUhsv48oXP73_bG3AZeb9p6VPw30w&usqp=CAU"
+                                        alt="">
+                                </div>
+                                <div class="ml-2">
+                                    <div class="h5" style="color: black; margin-left: 5px;">none</div>
+                                    <div class="h7 text-muted" style="margin-left: 5px;">Anime</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="dropdown">
+                                    <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-ellipsis-h"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
+                                        <div class="h6 dropdown-header">Configuration</div>
+                                        <a class="dropdown-item" href="#">Save</a>
+                                        <a class="dropdown-item" href="#">Hide</a>
+                                        <a class="dropdown-item" href="#">Report</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-body">
+                        <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>10 min ago</div>
+                        <!-- <a class="card-link" href="#">
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adip.</h5>
+      </a> -->
+                        <div class="mr-2" style="overflow: hidden;">
+                            <img width="500" height="600" src="img/One-2.jpg" id="image-feed" alt="">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link"><i class="fa fa-heart-o"></i> Like</a>
+                        <a href="#" class="card-link"><i class="fa fa-comment-o"></i> Comment</a>
+                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
+                    </div>
+                </div>
+
+                <!-- /card -->
+            </div>
+        </div>
+
+        <!-- <div class="b-example-divider"></div> -->
+
+        <!-- Messages -->
+
+        <div class="d-flex flex-column align-items-stretch flex-shrink-0 p-3" style="width: 25%;">
+            <a href="#"
+                class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+                <svg class="me-2" xmlns="http://www.w3.org/2000/svg" height="22" width="22" viewBox="0 0 512 512">
+                    <path fill="#FFFFFF"
+                        d="M256 448c141.4 0 256-93.1 256-208S397.4 32 256 32S0 125.1 0 240c0 45.1 17.7 86.8 47.7 120.9c-1.9 24.5-11.4 46.3-21.4 62.9c-5.5 9.2-11.1 16.6-15.2 21.6c-2.1 2.5-3.7 4.4-4.9 5.7c-.6 .6-1 1.1-1.3 1.4l-.3 .3 0 0 0 0 0 0 0 0c-4.6 4.6-5.9 11.4-3.4 17.4c2.5 6 8.3 9.9 14.8 9.9c28.7 0 57.6-8.9 81.6-19.3c22.9-10 42.4-21.9 54.3-30.6c31.8 11.5 67 17.9 104.1 17.9zM128 208a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm128 0a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm96 32a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
+                </svg>
+                <span class="fs-5 fw-semibold text-white">Messages</span>
+            </a>
+            <div class="list-group list-group-flush border-bottom scrollarea">
+                <a href="#" class="list-group-item list-group-item-action active py-3 lh-tight" aria-current="true">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                        <strong class="mb-1">Anime Joy</strong>
+                        <small>Mon</small>
+                    </div>
+                    <div class="col-10 mb-1 small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                        earum rem magni asperiores incidunt vitae, illo aliquid sed animi iusto.
+                    </div>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                        <strong class="mb-1">Neil</strong>
+                        <small class="text-muted">Today</small>
+                    </div>
+                    <div class="col-10 mb-1 small">Can You Watch One Peice??
+                    </div>
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                        <strong class="mb-1">List group item heading</strong>
+                        <small class="text-muted">Mon</small>
+                    </div>
+                    <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.
+                    </div>
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                        <strong class="mb-1">List group item heading</strong>
+                        <small class="text-muted">Mon</small>
+                    </div>
+                    <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.
+                    </div>
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                        <strong class="mb-1">List group item heading</strong>
+                        <small class="text-muted">Mon</small>
+                    </div>
+                    <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.
+                    </div>
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                        <strong class="mb-1">List group item heading</strong>
+                        <small class="text-muted">Wed</small>
+                    </div>
+                    <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.
+                    </div>
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                        <strong class="mb-1">List group item heading</strong>
+                        <small class="text-muted">Tues</small>
+                    </div>
+                    <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.
+                    </div>
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                        <strong class="mb-1">List group item heading</strong>
+                        <small class="text-muted">Mon</small>
+                    </div>
+                    <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- <div class="b-example-divider"></div> -->
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Here i am</h2>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    Thank to pop me out of that button, but now i'm done so you can close this window.
+                </div>
+            </div>
+        </div>
+
+
+    </main> 
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script src="sidebars.js"></script>
+    <!-- <script src="home.js"></script> -->
+</body>
+
+</html>

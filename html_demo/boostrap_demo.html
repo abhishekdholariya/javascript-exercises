@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      $(function(){
+        $('#open').click(function(){
+          $('#newcollapse').collapse('toggle');
+        })
+        $('#close').click(function(){
+          $('#newcollapse').collapse('show');
+        })
+      })
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      *:focus {
+        outline: none;
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+      }
+    </style>
+    <title>Boostrap Prectice</title>
+  </head>
+  <body>
+    <div class="container-fluid bg-dark text-white py-2">
+      <h3>Bootstrap Grid System Practice</h3>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-6">hello</div>
+        <div class="col-lg-3 col-md-6 col-6">hello1</div>
+        <div class="col-lg-3 col-md-6 col-6">hello2</div>
+        <div class="col-lg-3 col-md-6 col-6">hell3o3</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-12 col-sm-6">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut earum
+          debitis impedit quis odit, minus illum sequi ea, incidunt id, nisi
+          nulla pariatur consectetur! Consequuntur eum soluta voluptatum
+          dignissimos architecto!
+        </div>
+        <div class="col-lg-6 col-12 col-sm-6">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
+          fugit at nulla minus? Facilis nisi ad, vitae reprehenderit fuga
+          laudantium nesciunt quasi recusandae non tempore asperiores nemo qui,
+          ab minus.
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row row-cols-2 row-cols-lg-4 g-2">
+        <div class="col">
+          <div class="border bg-light">row column</div>
+        </div>
+        <div class="col">
+          <div class="border bg-light">row column</div>
+        </div>
+        <div class="col-lg-6">
+          <div class="border bg-light">row column</div>
+        </div>
+        <div class="col">
+          <div class="border bg-light">row column</div>
+        </div>
+        <div class="col">
+          <div class="border bg-light">row column</div>
+        </div>
+        <div class="col">
+          <div class="border bg-light">row column</div>
+        </div>
+        <div class="col">
+          <div class="border bg-light">row column</div>
+        </div>
+        <div class="col">
+          <div class="border bg-light">row column</div>
+        </div>
+        <div class="col">
+          <div class="border bg-light">row column</div>
+        </div>
+        <div class="col">
+          <div class="border bg-light">row column</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-sm-6">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur sed
+          consectetur officia quam dolorem cumque doloremque commodi ut ea?
+          Consequatur voluptatum nostrum corporis numquam porro aliquam ipsa
+          praesentium, sed dolores.
+        </div>
+        <div class="col-lg-6">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+          architecto, ut at illum animi a, voluptatibus veniam nam voluptatum
+          iusto quam velit odit quasi officia alias officiis nesciunt illo
+          harum?
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row border row-cols-3 row-cols-">
+        <div class="col">h1</div>
+        <div class="col">h2</div>
+        <div class="col">h3</div>
+        <div class="col">h1</div>
+        <div class="col">h2</div>
+        <div class="col">h3</div>
+        <div class="col">h1</div>
+        <div class="col">h2</div>
+        <div class="col">h3</div>
+        <div class="col">h1</div>
+        <div class="col">h2</div>
+        <div class="col">h3</div>
+        <div class="col">h1</div>
+        <div class="col">h2</div>
+        <div class="col">h3</div>
+      </div>
+    </div>
+    <div class="container p-2">
+      <div class="row border">
+        <div class="col-3">col-3</div>
+        <div class="col-9">
+          <div class="row border">
+            <div class="col-8">col-8</div>
+            <div class="col-4">col-4</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container border p-2">
+      <div class="row">
+        <div class="col">
+          <div class="border p-2">hello</div>
+        </div>
+        <div class="col">
+          <div class="border p-2">hello</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row row-cols-3 row-cols-lg-2 m-2 g-2">
+        <div class="col">
+          <div class="border p-1">col row</div>
+        </div>
+        <div class="col">
+          <div class="border p-1">col row</div>
+        </div>
+        <div class="col">
+          <div class="border p-1">col row</div>
+        </div>
+        <div class="col">
+          <div class="border p-1">col row</div>
+        </div>
+        <div class="col">
+          <div class="border p-1">col row</div>
+        </div>
+        <div class="col">
+          <div class="border p-1">col row</div>
+        </div>
+        <div class="col">
+          <div class="border p-1">col row</div>
+        </div>
+        <div class="col">
+          <div class="border p-1">col row</div>
+        </div>
+        <div class="col">
+          <div class="border p-1">col row</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <img
+            class="img-fluid img-thumbnail rounded-circle"
+            src="images/box4_image.jpg"
+            alt="logo"
+          />
+        </div>
+        <div class="col-4">
+          <img
+            class="img-fluid img-thumbnail rounded-pill"
+            src="images/box4_image.jpg"
+            alt="logo"
+          />
+        </div>
+        <div class="col-4">
+          <figure>
+            <img
+              class="figure-img img-fluid img-thumbnail rounded-circle"
+              src="images/box4_image.jpg"
+              alt="logo"
+            />
+            <figcaption>demo images</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <figure>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0GOgPRxbcNc?si=zlVv50Orq-aHwbqT"></iframe>
+            <figcaption>demo video</figcaption>
+          </div>
+        </figure>
+        </div>
+        <div class="col-md-4">
+          <figure>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0GOgPRxbcNc?si=zlVv50Orq-aHwbqT"></iframe>
+            <figcaption>demo video</figcaption>
+          </div>
+        </figure>
+        </div>
+        <div class="col-md-4">
+          <figure>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0GOgPRxbcNc?si=zlVv50Orq-aHwbqT"></iframe>
+            <figcaption>demo video</figcaption>
+          </div>
+        </figure>
+        </div>
+      </div>
+    </div> -->
+    <div class="container">
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+          <thead class="bg-dark text-white">
+            <tr>
+              <th>name</th>
+              <th>number</th>
+              <th>email</th>
+              <th>email</th>
+              <th>email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe</td>
+              <td>0123456789</td>
+              <th>email</th>
+              <th>email</th>
+              <td>john.doe@example.com</td>
+            </tr>
+            <tr>
+              <td>John Doe</td>
+              <td>0123456789</td>
+              <td>0123456789</td>
+              <td>0123456789</td>
+              <td>john.doe@example.com</td>
+            </tr>
+            <tr>
+              <td>John Doe</td>
+              <td>0123456789</td>
+              <td>0123456789</td>
+              <td>0123456789</td>
+              <td>john.doe@example.com</td>
+            </tr>
+            <tr>
+              <td>John Doe</td>
+              <td>0123456789</td>
+              <td>0123456789</td>
+              <td>0123456789</td>
+              <td>john.doe@example.com</td>
+            </tr>
+            <tr>
+              <td>John Doe</td>
+              <td>0123456789</td>
+              <td>john.doe@example.com</td>
+              <td>john.doe@example.com</td>
+              <td>john.doe@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-4 col-sm-3 col-lg-6">
+          <label for="name" class="form-label">Enter Name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            class="form-control is-invalid"
+            placeholder="Name"
+            required
+          />
+
+          <div class="form-floating">
+            <textarea
+              name="address"
+              id="floatingTextarea"
+              class="form-control"
+            ></textarea>
+            <label for="floatingTextarea">Enter Address:</label>
+          </div>
+          <br />
+          <input
+            type="text"
+            name="disable"
+            class="form-control"
+            value="disable value"
+            aria-label="Disabled input example"
+            disabled
+          />
+          <label for="mail" class="form-label visually-hidden">mail</label>
+          <input
+            type="text"
+            name="name"
+            value="abhi@hmail.com"
+            readonly
+            class="form-control-plaintext m-2"
+          />
+          <label for="select file" class="form-label">select file</label>
+          <input type="file" name="file" class="form-control" multiple />
+          <label for="color" class="form-label">color picker</label>
+          <input
+            type="color"
+            name="color"
+            class="form-control form-control-color"
+          />
+
+          <label for="datalist" class="form-label">datalist option</label>
+          <input list="datalistoption" class="form-control" />
+          <datalist id="datalistoption">
+            <option value="amreli">amreli</option>
+            <option value="ahmedabad">ahmedabad</option>
+            <option value="surat">surat</option>
+            <option value="rajkot">rajkot</option>
+          </datalist>
+
+          <label for="select">select menu</label>
+          <select id="select" class="form-control" size="4" name="select">
+            <option selected>select</option>
+            <option value="text">Text</option>
+            <option value="text">Text</option>
+            <option value="text">Text</option>
+            <option value="text">Text</option>
+            <option value="text">Text</option>
+          </select>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="conding"
+              value="true"
+            />
+            <label for="my-input" class="form-check-label">coding</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="ui/ux"
+              value="true"
+            />
+            <label for="my-input" class="form-check-label">ui/ux</label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="gender"
+              id="male"
+            />
+            <label for="male">Male</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="gender"
+              id="female"
+            />
+            <label for="male">female</label>
+          </div>
+
+          <div class="form-ckeck form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              aria-checked="false"
+            />
+            <label class="form-check-label">Turn on the switch</label>
+          </div>
+
+          <label for="rang" class="form-label">range</label>
+          <input
+            type="range"
+            name="range"
+            class="form-range"
+            min="0"
+            step="5"
+          />
+
+          <div class="input-group md-3 flex-nowrap">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Username"
+              aria-label="Username"
+              aria-describedby="addon-wrapping"
+            />
+            <span class="input-group-text" id="addon-wrapping">@</span>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Username"
+              aria-label="Username"
+              aria-describedby="addon-wrapping"
+            />
+          </div>
+
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong
+                    >This <span class="badge bg-dark">new</span> is the first
+                    item's accordion body.</strong
+                  >
+                  It is shown by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It
+                  is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert alert-primary" role="alert">a alert box</div>
+
+          <button class="btn btn-primary mt-1" type="button">
+            Notifaction <samp class="badge bg-dark">4</samp>
+          </button>
+          <button type="button" class="btn btn-primary position-relative mt-1">
+            Submit Form
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >99+</span
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="accordion" id="accordionparent">
+        <div class="accordion-item">
+          <h3 class="accordion-header"></h3>
+          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#one">
+            item 1
+          </button>
+          <div class="accordion-collapse collapse" id="one" data-bs-parent="#accordionparent">
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+              numquam non earum dolor illum harum nobis eveniet dolorem officiis
+              culpa voluptatem adipisci veritatis eligendi quibusdam fugiat quam
+              odit, ratione perferendis!
+            </div>
+          </div>
+        </div>
+        <!-- accordion -->
+        <div class="accordion-item">
+          <h3 class="accordion-header"></h3>
+          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#two">
+            item 2
+          </button>
+          <div class="accordion-collapse collapse" id="two" data-bs-parent="#accordionparent">
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+              numquam non earum dolor illum harum nobis eveniet dolorem officiis
+              culpa voluptatem adipisci veritatis eligendi quibusdam fugiat quam
+              odit, ratione perferendis!
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="container ">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img src="images/facebook1.jpeg" class="card-img-top" alt="facebook">
+              <div class="card-body">
+                <h3 class="card-title">demo card</h3>
+                <p class="card-text">asfkfnsj fsnd vdjs va vdjva d mfj</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img src="images/facebook1.jpeg" class="card-img-top" alt="facebook">
+              <div class="card-img-overlay">
+                <h3 class="card-title">demo card</h3>
+                <p class="card-text">asfkfnsj fsnd vdjs va vdjva d mfj</p>
+                <a href="#" class="card-link">click</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img src="images/facebook1.jpeg" class="card-img-top" alt="facebook">
+              <div class="card-body">
+                <h3 class="card-title">demo card</h3>
+                <p class="card-text">asfkfnsj fsnd vdjs va vdjva d mfj</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card-group">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="images/facebook2.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="images/facebook2.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="images/facebook2.jpeg"x class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 py-3">
+            <button id="open" class="btn btn-primary">open</button>
+            <button id="close" class="btn btn-primary">close</button>
+            <div class="collapse" id="newcollapse">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt recusandae excepturi ad exercitationem eveniet adipisci a nemo, porro dolore odio ratione. Et, eum. Blanditiis harum doloremque, inventore tempora repellat quod!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- dropdown box -->
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          select city
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li class="dropdown-itemm">amreli</li>
+          <li class="dropdown-itemm">ahmedabad</li>
+          <li class="dropdown-itemm">surat</li>
+        </ul>
+      </div>
+      <!-- modal -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <button class="btn btn-primary" data-bs-tggle="modal" data-bs-tager="#mymodal">modal open</button>
+            <div class="modal" id="mymodal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero eum reiciendis sed explicabo accusantium deserunt 
+                  aliquid optio, blanditiis labore, consequatur doloribus? Sit harum aliquam amet ipsam voluptatum accusamus voluptates maiores.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+body
+{
+    background-color: antiquewhite;
+}
+section{
+    height: 1000px;
+    width: 1300px;
+    background-color: white;
+    margin: auto;
+}
+header{
+    height: 100px;
+    background-color: aquamarine;
+}
+
+header p{
+    text-align: center;
+    padding-top: 3%;
+    /* font-weight: 900; */
+}
+nav
+{
+    height: 20px;
+    background-color: aqua;
+    margin-top: 5px;
+}
+div{
+    height: 700px;
+    background-color: aquamarine;
+    width: 200px;
+    margin-top: 5px;
+    float: left;
+}
+main{
+    height: 600px;
+    width: 1095px;
+    margin: 5px 0px 5px 0px;
+    background-color: aquamarine;
+    float: right;
+}
+footer{
+    height: 160px;
+    /* clear: both;   */
+    float: left;
+    margin-top: 10px;
+    width: 1300px;
+    background-color: lightgray;
+}

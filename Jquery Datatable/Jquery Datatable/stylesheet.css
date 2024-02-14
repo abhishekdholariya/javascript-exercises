@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+#headSec{
+    height: 50px;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 28px;
+    margin: 20px;
+    margin-bottom: 50px;
+}
+
+#bodySec{
+    text-align: center;
+}
+
+#bodySec > #inputSec{
+    display: flex;
+    justify-content: center;
+}
+
+#bodySec > #inputSec > .inputDiv,
+#bodySec > #inputSec > .submitDiv{
+    margin: 10px;
+}
+
+#bodySec input,
+#bodySec > #inputSec button{
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding-left: 5px;
+}
+
+#bodySec > #inputSec button{
+    padding: 0;
+    width: 100px;
+    border: none;
+    background-color: #04AA6D;
+    color: white;
+}
+
+#bodySec > #displaySec{
+    padding-top: 50px;
+    padding-left: 10%;
+}
+
+#bodySec > #displaySec > #displayDiv{
+    width: 90%;
+}
+
+.removeTask, .updateTask{
+    padding: 0;
+    height: 25px;
+    width: 70px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: white;    
+}
+
+.editTask, .cancelTask{
+    padding: 0;
+    height: 25px;
+    width: 70px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9800;
+    color: white;    
+}
+
+.groupCol{
+    font-size: 18px;
+    text-align: center;
+    color: gray;
+}
+
+#displaySec > #groupBy{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+    width: 90%;
+}
+
+#displaySec > #groupBy > h4{
+    margin-right: 20px;
+    font-size: 22px;
+    font-weight: 100;
+}
+
+#displaySec > #groupBy > button{
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 35px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    background-color: #008CBA;
+    color: white;  
+    font-size: 15px;
+}
+
+#table > #tableHead .data{
+    text-align: center;
+}

@@ -1,0 +1,36 @@
+body {
+    background-color: #837f7f75;
+}
+
+.h7 {
+    font-size: 0.8rem;
+}
+
+.gedf-wrapper {
+    margin-top: 0.97rem;
+}   
+
+.user-img{
+  margin-left: 84px;
+}
+
+.accordion {
+  background-color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  transition: 0.4s;
+  text-align: center;
+  outline: none;
+  border: none;
+}
+
+.accordion-button:hover{
+  background-color: rgb(192, 238, 232);
+}
+@media(max-width:640px){
+  .container{
+    max-width: 640px;
+  }
+}
