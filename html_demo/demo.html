@@ -1,8 +1,23 @@
-<div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <h2>javascript and html use</h2>
+    <p id="str"></p>
 
-    <div col-md-3>
-        
-    </div>
-    <div col-md-6></div>
-    <div col-md-3></div>
-</div>
+<script>
+    let header ="template string";
+    let tags=["java","python","php"];
+    let html=`<h2>${header}</h2><ul>`;
+        for(const x of tags){
+            html += `<li>${x}</li>`;
+        }
+        html+=`</ul>`;
+    document.getElementById("str").innerHTML = html;
+</script>
+</body>
+</html>

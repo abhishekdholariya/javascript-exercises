@@ -1,15 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>
+    <script>
+      /*function changesize(){
+            document.getElementById('heading').innerHTML='nice to meet you'
+        }*/
+    </script>
     <title>javascript</title>
-</head>
-<body>
-    <button onclick="document.getElementById('myimg').src='/html_demo/images/facebook2.jpeg'">Click to first img</button>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 justify-content-center d-flex p-3">
+          <button class="btn btn-primary m-3" id="increment">+</button>
+          <div id="counter-value">0</div>
+          <button class="btn btn-primary m-3" id="decrement">-</button>
+        </div>
+        <div id="demo"></div>
+        </div>
+      </div>
+    </div>
+    <!-- <button onclick="document.getElementById('myimg').src='/html_demo/images/facebook2.jpeg'">Click to first img</button>
     <img src="/html_demo/images/facebook2.jpeg" id="myimg" alt="javascript img" style="width: 100px;">
     <button onclick="document.getElementById('myimg').src='/html_demo/images/facebook1.jpeg'">click to chahge img</button>
     <h2 style="font-size: 20px;" id="heading">hello</h2>
-    <button onclick="document.getElementById('heading').innerHTML='nice to meet you'">submit</button>
-</body>
+    <button onclick=changesize()>submit</button> -->
+    <script>
+        let counter = 0;
+ 
+const counterValue = document.getElementById('counter-value');
+const incrementBtn = document.getElementById('increment');
+const decrementBtn = document.getElementById('decrement');
+
+// To increment the value of counter
+incrementBtn.addEventListener('click', () => {
+    counter++;
+    counterValue.innerHTML = counter;
+});
+ 
+// To decrement the value of counter
+decrementBtn.addEventListener('click', () => {
+    counter--;
+    counterValue.innerHTML = counter;
+});
+console.log("hello");
+let person={
+  name:"John",
+  age:31,
+  gender:"male"
+};
+let text="";
+for(let x in person){
+  text+=person[x]+"";
+};
+let txt =Object.values(person);
+let txt2 =JSON.stringify(person);
+document.write("<p>"+txt+"</p>")
+document.getElementById("demo").innerHTML=txt2;
+    </script>
+  </body>
 </html>
