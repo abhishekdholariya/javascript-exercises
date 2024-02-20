@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name">
+    <input type="text" id="age">
+    <input type="text" id="phone">
+    <button type="button" onclick="personname()">name</button>
+    <button type="button" onclick="age()">name</button>
+    <button type="button" onclick="phone()">name</button>
+    <p id="data"></p><br>
+    <p id="age1"></p><br>
+    <p id="phone1"></p>
+    <script>
+        
+        function personname(){
+            debugger;
+            var name = document.getElementById("name").value;
+            console.log(name);
+            debugger;
+            document.getElementById("data").innerHTML = name;
+        }
+        function age(){
+            debugger;
+            var age = document.getElementById("age").value;
+            debugger;
+            document.getElementById("age").innerHTML = age;
+        }
+        function phone(){
+            var phone = document.getElementById("phone").value;
+            document.getElementById("phone").innerHTML = phone;
+        }
+    </script>
+</body>
+</html>

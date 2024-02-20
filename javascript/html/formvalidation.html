@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name: </label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email: </label><br>
+        <input type="email" name="email" id="email"><br>
+        <input type="submit" value="Submit" onclick="validate()">
+    </form>
+    <p id="date"></p>
+    <button type="button" onclick="showdate()">show date</button>
+    <div onmouseover="over(this)" onmouseout="out(this)" onmousewheel="wheel(this)" style="background-color: red; height:20px; width:120px; padding:40px">hello</div>
+    <div onmousedown="down(this)" onmouseover="over(this)" style="background-color: red; height:20px; width:120px; padding:40px">hello</div>
+    <script>
+        function over(obj){
+            obj.innerHTML='over';
+        }
+        function down(obj){
+            obj.innerHTML='mouseenter';
+        }
+        function over(obj){
+            obj.innerHTML="thank you";
+        }
+        function out(obj){
+            obj.innerHTML="byy";
+        }
+        function wheel(obj){
+            obj.innerHTML="mouse wheel";
+        }
+        function showdate(){
+            var today = new Date().toLocaleDateString();
+            document.getElementById('date').innerHTML=today;
+            //alert(today.toLocaleDateString());
+        }
+        //form validation
+        function validate(){
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            
+            if(name == "" || email == ""){
+                alert("All fields must be filled out");
+                return false;
+            }else if(!isAlphabetical(name)){
+                alert("Name should only contain letters");
+                return false;
+            }else if(!isValidEmail(email)){
+                alert("Please enter a valid email address");
+                return false;
+            }
+            return true;
+            alert('welcom back')
+        };
+    </script>
+</body>
+</html>

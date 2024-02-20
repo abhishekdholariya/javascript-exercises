@@ -71,3 +71,35 @@ const getset ={
     }
 };
 console.log(getset["name"]);
+console.log(getset.lang);
+
+const obj ={counter:0};
+
+Object.defineProperty(obj,"reset",{
+    get:function(){this.counter=0;}
+});
+
+Object.defineProperty(obj,"increment",{
+    get:function(){this.counter++;}
+});
+
+Object.defineProperty(obj,"drecrement",{
+    get:function(){this.counter--;}
+});
+
+Object.defineProperty(obj,"add",{
+    set:function(value){this.counter+=value;}
+});
+
+obj.increment;
+obj.reset;
+obj.add=5;
+console.log("Counter Value : " ,obj.counter); 
+
+function persons(name,age) {
+    this.name = name ;
+    this.age = age ;
+}
+const myname=new persons("abhi",21);
+myname.phone_no=12345667;
+console.log(myname.phone_no);

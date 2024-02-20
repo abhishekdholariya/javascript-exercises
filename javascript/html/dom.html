@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+</head>
+<body>
+    <h1 id="h" class="h">DOM Manipulation Example</h1>
+    <p id="p" class="p">This is a paragraph.</p>
+    <input type="password" name="pass" id="pass"/>
+    <p id="demo"></p>
+    <ul>
+        <li>i1</li>
+        <li>i2</li>
+        <li>i3</li>
+        <li>i4</li>
+    </ul>
+    <div class="parent">
+        <div class="day">one</div>
+        <div class="day">two</div>
+        <div class="day">three</div>
+        <div class="day">four</div>
+    </div>
+    <ul class="lang" id="d">
+        <li>list one</li>
+    </ul>
+    <script>
+        let data=document.getElementById('h').value;
+        console.log(data);
+        let parent = document.querySelector('.parent');
+        //console.log(parent);
+        //console.log(parent.children[0].innerHTML);
+        for(let i=0;i<parent.children.length;i++){
+            console.log(parent.children[i].innerHTML);
+        }
+        console.log(parent.firstElementChild);
+        console.log(parent.lastElementChild);
+        let child = document.querySelector('.day');
+        console.log(child.parentElement);
+        console.log(child.nextElementSibling);
+        console.log(parent.childNodes)
+
+        //create element using js 
+        let div = document.createElement('div');
+        console.log(div);
+        div.className='main';
+        div.id=Math.round(Math.random()*10+1);
+        div.setAttribute('title','genrate titel');
+        div.style.backgroundColor="green";
+        //div.innerText='javscript node';
+        let addtext=document.createTextNode('javascripit');
+        div.appendChild(addtext);
+        document.body.appendChild(div);
+
+        let dv=document.createElement('dv')
+        console.log(dv) 
+        dv.className='main';
+        dv.id=Math.random()*10;
+        div.setAttribute('title','demo div');
+        dv.style.backgroundColor='red';
+        dv.innerText='demo div';
+        document.body.appendChild(dv)
+    
+        //add li element using function js
+        function addlielement(list){
+            let li=document.createElement('li');
+            li.innerHTML=`${list}`;
+            document.querySelector('.lang').appendChild(li);
+        }
+
+        function addliopti(list){
+            let li=document.createElement('li');
+            li.appendChild(document.createTextNode(list));
+            document.querySelector('.lang').appendChild(li);
+        }
+        addliopti('php')
+        addlielement('java');
+        addlielement('python');
+    
+        //edit li list using js
+        let changeli=document.querySelector('li:nth-child(2)');
+        console.log(changeli);
+        //changeli.innerHTML='JAVA';
+        let newli=document.createElement('li');
+        newli.textContent="php";
+        changeli.replaceWith(newli);
+
+        let change=document.querySelector('li:first-child');
+        change.outerHTML='<li>php</li>';
+
+        //remove li list
+        let removeli=document.querySelector('li:last-child');
+        removeli.remove();
+    </script>
+</body>
+</html>
