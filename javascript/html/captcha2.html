@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAPTCHA Example</title>
+<script>
+    var generatedCaptcha = '';
+
+    function generateCaptcha() {
+        var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+        var length = 6; // Number of characters in the CAPTCHA
+        generatedCaptcha = '';
+
+        for (var i = 0; i < length; i++) {
+            var randomIndex = Math.floor(Math.random() * chars.length);
+            generatedCaptcha += chars.substring(randomIndex, randomIndex + 1);
+        }
+        document.getElementById('captcha').innerHTML = generatedCaptcha;
+    }
+
+    function validateCaptcha() {
+        var userInput = document.getElementById('userInput').value;
+        if (userInput.toLowerCase() === generatedCaptcha.toLowerCase()) {
+            alert('CAPTCHA is valid!');
+        } else {
+            alert('CAPTCHA is not valid! Please try again.');
+            generateCaptcha();
+        }
+    }
+</script>
+</head>
+<body>
+
+<div id="captcha"></div>
+<input type="text" id="userInput" placeholder="Enter CAPTCHA">
+<button onclick="validateCaptcha()">Check CAPTCHA</button>
+<button onclick="generateCaptcha()">Generate CAPTCHA</button>
+
+</body>
+</html>
+
+
+
+const textGenerate=()=>{
+    let generatedText="";
+    var charsArray ="01234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+	for (var i = 0; i < Math.floor(Math.random() * 3) + 5; i++) {    
+    	generatedText += charsArray[Math.floor(Math.random() * charsArray.length)];    
+	}
+    // for(let i=0;i<2;i++){
+    //     generatedText+=String.fromCharCode(randomNumber(65,90)); //capital letters A to Z 
+    //     generatedText+=String.fromCharCode(randomNumber(48,57)); //numbers 0 to 9
+    //     generatedText+=String.fromCharCode(randomNumber(97,122)); //lowercase letters a to z
+    // }
+    return  generatedText;
+}

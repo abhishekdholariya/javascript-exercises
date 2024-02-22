@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            background: linear-gradient(to right, #348aca,#9b59b0);
+        }
+        .container{
+            width: 29em;
+            background-color: #fff;
+            padding: 5em;
+            border-radius: 0.5em;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+
+        }
+        .wrapper{
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            margin: 0;
+        }
+        button#reloadbtn{
+            font-size: 26px;
+            width: 4.6em;
+            background-color: #9b59b0;
+            border: none;
+            border-radius: 0.4em;
+            height: 70px;
+        }
+        input[type="text"]{
+            font-size: 1.05em;
+            width: 100%;
+            margin-top: 0.3em;
+            padding: 0.8em 0.1em;
+            border: 1px solid black;
+            border-radius: 0.4em;
+        }
+        button#submitbtn{
+            width: 100%;
+            background-color: #9b59b0;
+            color: white;
+            font-size: 1.5em;
+            border: none;
+            margin-top: 0.1em;
+            padding: 0.5em 0;
+            border-radius: 0.4em;
+        }
+        canvas{
+            border: 1px solid black;
+            border-radius: 0.4em;
+        }
+    </style>
+    <title>captcha oce</title>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <canvas id="canvas" width="300" height="60"></canvas>
+            <button id="reloadbtn"><i class="fas fa-sync-alt"></i></button>
+        </div>
+        <input type="text" id="user-input" placeholder="Enter the code here"/>
+        <button id="submitbtn" onclick="validate()" type="button">Submit</button>
+    </div>
+    <script src="../js/captcha.js"></script>
+</body>
+</html>
+
+

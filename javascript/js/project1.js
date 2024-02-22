@@ -1,6 +1,5 @@
 let btn=document.querySelectorAll('.button');
 let body=document.querySelector('body');
-
 btn.forEach(function (btn){
     console.log(btn);
     btn.addEventListener('click',function () {

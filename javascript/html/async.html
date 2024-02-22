@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+
+<body>
+    <h1>Counter</h1>
+    <p id="data"></p>
+    <button id="start" type="button">Start</button>
+    <button id="stop" type="button">Stop</button>
+    <Script>
+        window.onload=pageLoad;
+        function pageLoad() {
+            var startButton = document.getElementById("start");
+            startButton.onclick = stcounter;
+        }
+        var n=0;
+        let countstop;
+        const startcounter=function(){
+                countstop =setInterval(stcounter,1000);
+                function stcounter(){
+                console.log("counter")
+                document.getElementById("data").innerHTML = "Your count "+ n;
+                n++;
+            }
+        }
+        const stopcounter = function(){
+            clearInterval(countstop);
+            console.log('stop');
+        }
+        //strat button functionality
+        document.querySelector("#start").addEventListener('click',startcounter);
+        // Stop button functionality
+        document.querySelector('#stop').addEventListener('click', stopcounter);
+
+    </Script>
+</body>
+</html>

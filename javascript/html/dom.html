@@ -25,6 +25,13 @@
     <ul class="lang" id="d">
         <li>list one</li>
     </ul>
+    <h2>addevents</h2>
+    <ul id="images">
+        <li><img src="../img/facebook1.jpeg" id="facebook1" alt="demo images" height="100px" width="150px"/></li>
+        <li><img src="../img/facebook1.jpeg" id="facebook2" alt="demo images" height="100px" width="150px"/></li>
+        <li><img src="../img/facebook1.jpeg" id="facebook3" alt="demo images" height="100px" width="150px"/></li>
+        <li><img src="../img/facebook1.jpeg" id="facebook4" alt="demo images" height="100px" width="150px"/></li>
+    </ul>
     <script>
         let data=document.getElementById('h').value;
         console.log(data);
@@ -92,6 +99,27 @@
         //remove li list
         let removeli=document.querySelector('li:last-child');
         removeli.remove();
+
+        
+        /*document.getElementById('images').addEventListener('click',function(e){
+            console.log('ul tag');
+        })
+        document.getElementById('facebook1').addEventListener( 'click' , function (e) {
+            console.log('Facebook page');
+            e.preventDefault();
+            e.stopPropagation();
+        })*/
+
+
+        document.querySelector('#images').addEventListener('click',function(e){
+            console.log(e);
+            console.log(e.target.tagName);
+            if(e.target.tagName==='IMG'){
+                console.log(e.target.id);
+                let removeit=e.target.parentNode;
+                removeit.remove();
+            }
+        },false)
     </script>
 </body>
 </html>

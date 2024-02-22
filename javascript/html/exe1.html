@@ -43,8 +43,10 @@ incrementBtn.addEventListener('click', () => {
  
 // To decrement the value of counter
 decrementBtn.addEventListener('click', () => {
+  if(counter>0){
     counter--;
     counterValue.innerHTML = counter;
+  }
 });
 console.log("hello");
 let person={
